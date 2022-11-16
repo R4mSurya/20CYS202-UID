@@ -8,8 +8,9 @@
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYwGQVZRxjE6j00TEuHtS_O69_cGKwlibzjlG_QAFgbw&s">
     <style>
         body {
-            background-color: #FBF8BE;
-            margin-left: 500px;
+          margin-top: 0px;
+          background-image: linear-gradient(to right, #434343 0%, #FBF8BE);
+          margin-left: 500px;
         }
 
 /* CSS */
@@ -55,25 +56,59 @@
   transform: translateY(0);
 }
 
+.topnav {
+  background-color: rgb(6, 6, 6);
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  margin-top: 0px;
+margin-left: 0px;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: #060606;
+  color: rgb(241, 231, 231);
+}
+
     </style>
 </head>
 <body>
+  <div style="margin-left: -500px;" class="topnav" style="text-align:right">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact</a>
+</div>
     <br>
     <br>
     <br>
     <br>
     <br>
     <br>
-    <h1>Contact me at:</h1>
-    <a href="https://instagram.com/r.a.m_s.u.r.y.a?igshid=YmMyMTA2M2Y="><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"width="100px" height="100px"></a>
-    <a style="padding-left: 40px;" href="https://github.com/R4mSurya/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="100px" height="100px"></a>
-    <a style="padding-left: 40px;" href="phone.html"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png" width="100px" height="100px"></a>
+    <h1 style="color: white;">Contact me at:</h1>
+    <a  href="https://instagram.com/r.a.m_s.u.r.y.a?igshid=YmMyMTA2M2Y=" target="_blank"><img src="https://img.icons8.com/material-rounded/384/instagram-new.png" width="100px" height="100px" ></a>
+    <a style="padding-left: 40px;" href="https://github.com/R4mSurya/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="100px" height="100px"></a>
+    <a style="padding-left: 40px;" href="phone.html" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png" width="100px" height="100px"></a>
+    <a style="padding-left: 40px;" href="https://www.linkedin.com/in/ram-surya-suresh-kumar-36965022a/" target="_blank"><img src="https://www.edigitalagency.com.au/wp-content/uploads/new-linkedin-logo-white-black-png.png" width="100px" height="100px"></a>
     <br>
     <br>
     <br>
     <br>
     <form>
-        <p style="color: rgb(8, 8, 8);">Enter your feedback</p>
+        <p style="color: rgb(245, 232, 232);">Enter your feedback</p>
         <input style="height: 100px;width: 500px;" type="text" name="feedback">
         <a href="last.html">
         <input type="button" name="submit" value="submit" class="button-27"></a>
