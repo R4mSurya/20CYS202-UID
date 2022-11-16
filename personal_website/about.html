@@ -9,17 +9,19 @@
     <style>
         body {
             margin: 0%;
-            background-color: #234E70;
+            background-image: linear-gradient(to right, #1b86d1 0%, #0d2439);
             font-size: 30PX;
+            color: #1fce85;
             
         }
         .topnav {
-  background-color: rgb(237, 93, 93);
+  background-color: rgb(11, 11, 11);
   overflow: hidden;
   position: fixed;
   width: 100%;
   margin-top: 0px;
 margin-left: 0px;
+z-index: 99;
 }
 .topnav a {
   float: left;
@@ -40,40 +42,101 @@ margin-left: 0px;
   background-color: #060606;
   color: rgb(241, 231, 231);
 }
+.fancy {
+  position: relative;
+  background-color: rgb(9, 9, 8);
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: 20px;
+}
+
+.fancy::before {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  right: 5px;
+  width: 50%;
+  top: 80%;
+  max-width: 200px;
+
+  box-shadow: 0px 13px 10px black;
+  rotate: 4deg;
+}
+.fancy2 {
+  position: relative;
+  background-color: rgb(9, 9, 8);
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: 830px;
+}
+
+.fancy2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  right: 5px;
+  width: 50%;
+  top: 80%;
+  max-width: 200px;
+  box-shadow: 0px 13px 10px black;
+   rotate: 4deg;
+}
+
     </style>
 </head>
 <body>
     <div class="topnav" style="text-align:right">
         <a href="index.html">Home</a>
-        <a href="#about" target="_blank">About</a>
-        <a href="contact.html" target="_blank">Contact</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
     </div>
-    <img align="middle" src="WhatsApp Image 2022-11-12 at 7.01.45 PM-modified.png" style="height:270px; width:270px;padding-top: 50px; top:60px;"> 
-    <p style="color: 8BErgb(230, 207, 230);">
+    <img align="middle" src="aboutimg-modified.png" style="height:270px; width:270px;padding-top: 50px; top:60px;padding-left: 600px;"> 
+
+
+    <p style="color: #f3e7e7; padding: 20px;">
         Hey there!!!
-        Myself Ram Surya, pursuing B.Tech CSE 2nd year in Amrita Vishwa Vidyapeetham.<br> 
+        Myself Ram Surya, pursuing B.Tech CSE 2<sup>nd</sup> year in Amrita Vishwa Vidyapeetham.
+        I grew up and did my schooling in chennai.
+        I'm interested in cyber security and applications Development. During my leisure time, I binge watch web series, movies and others except for cartoons(Anime).
         <br><br>
         
     </p>
-    <b style="color:white;">Certifications</b>
-    <ul style="color: rgb(214, 181, 181);">
+    <div class="fancy">
+    <b>Certifications</b>
+    <ul>
         <li>Certified Blockchain Associate</li>
         <li>Android Development Certification</li>
-        <li>Kotlin Basics</li>
+        <li>Kotlin Basics Certification</li>
     </ul>
-    <b style="color:white;">Skills</b>
-    <ul style="color: rgb(207, 166, 166);">
+</div>
+
+<br>
+<div class="fancy2">
+    <b>Skills</b>
+    <ul>
         <li>Android Development</li>
         <li>Competitive Coding</li>
-        <li>Pentesting</li>
+        <li>Penetration Testing</li>
     </ul>
-    <b style="color:white;">Hobbies</b>
-    <ul style="color: rgb(205, 169, 169);">
+</div>
+<br>
+    <div class="fancy">
+    <b >Hobbies</b>
+    <ul>
         <li>Playing Football</li>
         <li>Watching Web Series</li>
         <li>Reading books</li>
     </ul>
+    </div>
 </div>
-    
+
+<br>
+
+
 </body>
 </html>
