@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Anokha</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="data:image/png;base64,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" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha - v4.9.1
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Anokha</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Workshops</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="reg.html" target="_blank">Register</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          
+          <h1>Anokha TechFest</h1>
+          <h2>Amrita Vishwa Vidyapeetham</h2>
+          <img src="https://www.easytourz.com/uploads/Businesslogo/1546835786.png" height="80" width="280" style="margin-bottom: 20px;">
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="reg.html" class="btn-get-started scrollto" target="_blank">Register</a>
+            <!--<a href="https://youtu.be/F6wAlwklTCQ" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>-->
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="https://1000logos.net/wp-content/uploads/2021/09/Cognizant-Logo.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Analog_Devices_Logo.svg/1280px-Analog_Devices_Logo.svg.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="https://1000logos.net/wp-content/uploads/2021/04/HR-Block-Logo.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYcjtZ-PfL_jhMLFDUPZ0B3iQtSR8qyAAThA3bucUK&s" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/58/State_Bank_of_India_logo.svg/2560px-State_Bank_of_India_logo.svg.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="https://skillsda.com/wp-content/uploads/2020/04/SkillsDA-OG-General.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Cliens Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              Anokha, the national engineering techfest of Amrita School of Engineering, Coimbatore, is a 3-day congregation of some of the brightest minds in India. Founded in 2010, Anokha has grown by leaps and bounds and has progressed to become one of the most popular and top techfests in India. 
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> One of India’s top techfests and first to have United Nations Academic Impact (UNAI) accreditation.</li>
+              <li><i class="ri-check-double-line"></i> Participation by thousands of students all over India.</li>
+              <li><i class="ri-check-double-line"></i> Tag lines of techfest are “Dare to be Different” and “Bigger, Better & Greener”.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              “Anokha Techfest, the annual event of Amrita School of Engineering, Coimbatore provides an unique opportunity for students to participate in fun-filled and challenging events and workshops. The event throws open opportunities for students from all disciplines to challenge themselves and foster the “Can Do” attitude. One of the key highlights of the Anokha 2020 edition was the Green Anokha concept. It was so wonderful to see the students adopt and implement our Chancellor AMMA’s idea of “Living in Harmony with Nature”. It was plastic-free and eco-friendly Anokha – an initiative that will become a tradition!!”, Dr. Sasangan Ramanathan, Dean, Faculty of Engineering, Amrita Vishwa Vidyapeetham.
+            </p>
+            <a href="https://www.amrita.edu/events/anokha-2020-10th-national-level-techfest/" target="_blank" class="btn-learn-more">Learn More About 2020 Anokha</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    
+    
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Workshops</h2>
+          <p>25 workshops by premier companies like Intel, Cisco, Robert Bosch, Mathworks, Nvidia, 24*7 AI in cutting-edge areas like Deep Learning, Welding, CANSAT, Ideabox, Machine Learning, IoT, Simulink, etc.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box" style="background-image: url(https://cast.ai/wp-content/uploads/2022/05/DES-186-Google-Cloud-pricing_-the-ultimate-guide-1200x628-COVER.jpg);">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Google Cloud Platform</a></h4>
+              <p style="color: aliceblue;">Grow in-demand skills in emerging cloud tech with Google experts</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box"  style="background-image: url(https://www.simplilearn.com/ice9/free_resources_article_thumb/Why-get-certified-in-Artificial-Intelligence.jpg)">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Artificial Intelligence</a></h4>
+              <p>Apply principles of AI in solutions that require Inference & Perception</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box" style="background-image: url(https://contentstatic.techgig.com/photo/91145356/can-a-data-scientist-become-an-ethical-hacker.jpg?12562);">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Ethical Hacking</a></h4>
+              <p style="color: aliceblue;">Learn to identify and fix security threats breaching the company's security system</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box" style="background-image: url(https://www.simplilearn.com/ice9/free_resources_article_thumb/Data-Science-vs.-Big-Data-vs.jpg);">
+              <div class="icon"><i class="bx bx-layer"></i></div>
+              <h4 ><a style="color: antiquewhite;" href="">Data Science</a></h4>
+              <p style="color: aliceblue;">Learn to use modern tools and techniques to find unseen patterns, derive meaningful information with experts from Simpl</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Register</h3>
+            <p>Register and have a wonderful experience!!</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="reg.html" target="_blank">Register</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Organizing Team</h2>
+          <p>The organizing committee for Anokha 2022 of faculty members Mr. M. Sreevalsan, Prof. Prashant R. Nair, Dr. K.V. Shriram & Dr. Ramaguru as Conveners and Mr. Gopakumar P., Mr. Baskar A., Dr. C. Arunkumar, Mr. Ritwik M. & Mr. Vijay Narayanan as Co-Conveners.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQEmx01D7yhqIg/profile-displayphoto-shrink_800_800/0/1516302572543?e=2147483647&v=beta&t=mBYo7WhIPq09nHQt3fpRNIS9kG8hN9qJ_qdUEKdmPc8" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>M. Sreevalsan</h4>
+                <span>Director -ICTS</span>
+                <p>From 1995, working with Amrita Vishwa Vidyapeetham – University. Currently heading the ICTS Department of the University.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><img src="https://pbs.twimg.com/profile_images/1067479954651340801/L7hzIVci_400x400.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Prashant R. Nair</h4>
+                <span> Associate Professor</span>
+                <p>Prashant R. Nair currently serves as an Associate Professor at School of Computing, Coimbatore Campus.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+              <div class="pic"><img src="https://pbs.twimg.com/profile_images/1214026470940499978/SVgVMLP7_400x400.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dr. Shriram K</h4>
+                <span>Assistant Professor</span>
+                <p>Dr. Shriram K. Vasudevan, Assistant Professor, Department of Computer Science & Engineering, has been nominated as an Intel Internet of Things (#IoT) Innovator</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="https://yt3.ggpht.com/ytc/AMLnZu9hfUQW8UTu2KAVxK3ArgTniw3T9ATqlaaiftVC-tI=s900-c-k-c0x00ffffff-no-rj" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Ramaguru Radhakrishnan</h4>
+                <span>Assistant Professor</span>
+                <p>Currently serves as Assistant Professor at TIFAC-CORE in Cyber Security, Amrita School of Engineering, Coimbatore</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3><b>FAQs</b></h3>
+              <p>
+                
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> When is the event scheduled? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      The event is scheduled to occur from Dec 28th to Dec 30th 2022 at Amrita Vishwa Vidyapeetham, coimbatore. 
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Is there any entry Fee? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Yes, there's an entry fee of 500 rupess for students from outside colleges.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Does this techfest add any value to our portfolio? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Yes, attending this techfest is highly valuable and can help you in getting internships.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Amrita Vishwa Vidyapeetham, coimbatore</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>anokhafest@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 8778604693</p>
+              </div>
+              <img src="https://images.indianexpress.com/2021/02/AmritaVishwa.jpg" height="300" width="450">
+            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>-->
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Anokha</h3>
+            <p>
+              Amrita Vishwa Vidyapeetham <br>
+              Coimbatore<br>
+              Tamil Nadu <br><br>
+              <strong>Phone:</strong> +91 8778604693<br>
+              <strong>Email:</strong> anokhafest@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.amrita.edu/">Amrita Vishwa Vidyapeetham</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Workshops</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#no">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#no">Privacy policy</a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>You can connect with us through:</p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/anokha_techfest?lang=en" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/anokha.amrita/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/anokhatechfest/?hl=en" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/school/anokha-amrita/about/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Anokha</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Designed by <a href="https://www.amrita.edu/">Amrita</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
